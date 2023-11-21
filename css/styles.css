@@ -1,0 +1,75 @@
+body {
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+;
+}
+
+.nav {
+	background-color: #187ddb;
+	padding:20px;
+	font-size: 25px;
+}
+
+.nav a {
+	padding: 20px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.nav a:hover {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.fortnite .item {
+	width: 400px;
+	float: left;
+	margin: 10px;
+	position: relative;
+}
+
+.fortnite .item img {
+	max-width: 100%;
+	float: left;
+}
+
+.fortnite .item img:nth-of-type(n+2) {
+    width: 100px;
+}
+
+.fortnite .rare {
+	background-image: radial-gradient(circle, #6b9ed4, #5785bc, #446da4, #31558c, #1e3f75);
+	border: 5px solid #5FA2DD;
+}
+
+.fortnite .item h2 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background: rgba(0,0,0, .5);
+	padding: 50px 0;
+	font-size: 40px;
+}
+
+
+.fortnite .legendary {
+	background-image: radial-gradient(circle, #cd8050, #b66e44, #9f5c39, #894b2d, #733a22);
+	border: 5px solid #B8774F;
+}
+
+.fortnite .uncommon {
+ 	background-image: radial-gradient(circle, #73a84c, #5f9141, #4c7b36, #3a652b, #2a5020);
+ 	border: 5px solid #7DAB54;
+}
+
+.fortnite .epic {
+	background-image: radial-gradient(circle, #a867d9, #965dc9, #8553b9, #744aaa, #64409a);
+	border: 5px solid #9464C4;
+}
+
+.fortnite .bundle p {
+	font-size: 1px;
+}
