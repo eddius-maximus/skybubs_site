@@ -95,10 +95,7 @@ h1 img {
     top: 148px;
 }
 
-.fortnite .rare {
-	background-image: radial-gradient(circle, #6b9ed4, #5785bc, #446da4, #31558c, #1e3f75);
-	border: 5px solid #5FA2DD;
-}
+
 
 .fortnite .item h2 {
 	position: absolute;
@@ -121,6 +118,10 @@ h1 img {
     box-sizing: border-box;
 }
 
+.fortnite .rare {
+	background-image: radial-gradient(circle, #6b9ed4, #5785bc, #446da4, #31558c, #1e3f75);
+	border: 5px solid #5FA2DD;
+}
 
 .fortnite .legendary {
 	background-image: radial-gradient(circle, #cd8050, #b66e44, #9f5c39, #894b2d, #733a22);
@@ -147,3 +148,24 @@ h1 img {
 	border: 2px solid #5FA2DD;
 }
 
+.fortnite .uncommon img:nth-of-type(n+2) {
+	background-image: radial-gradient(circle, #73a84c, #5f9141, #4c7b36, #3a652b, #2a5020);
+	border: 2px solid #7DAB54;
+}
+
+.fortnite .epic img:nth-of-type(n+2) {
+	background-image: radial-gradient(circle, #a867d9, #965dc9, #8553b9, #744aaa, #64409a);
+	border: 2px solid #9464C4;
+}
+
+.content .itemshop {
+	font-size: 50px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.content .minecrafttitle {
+	font-size: 50px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
