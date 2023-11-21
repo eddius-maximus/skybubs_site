@@ -1,9 +1,14 @@
 body {
-	background-color: #000000;
+
+	background-image: linear-gradient(to right top, #19b958, #00b08c, #00a3b0, #0092bd, #2f7fb3);
 	color: #ffffff;
 	text-align: center;
 	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 ;
+}
+
+.content {
+	height: 1000px;
 }
 
 .nav {
@@ -22,6 +27,12 @@ body {
 	font-weight: bold;
 	color: #ffffff;
 }
+
+.nav .active {
+	color: #EEFC46;
+	font-weight: bold;
+}
+
 
 .fortnite .item {
 	width: 400px;
@@ -73,3 +84,4 @@ body {
 .fortnite .bundle p {
 	font-size: 1px;
 }
+
