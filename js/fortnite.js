@@ -50,3 +50,4 @@ fetch('http://localhost:3000/daily-shop')
 
     })
     .catch(error => console.error('Error:', error));
+var lastRefresh = new Date(); // If the user just loaded the page you don't want to refresh either

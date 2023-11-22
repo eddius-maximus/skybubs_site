@@ -44,11 +44,10 @@ h1 img {
 	font-weight: bold;
 }
 
-.fortnite {
+.fortnite, .minecraft {
 	margin: auto;
 	max-width: 1070px;
 }
-
 
 .fortnite .item {
 	width: 200px;
@@ -158,8 +157,14 @@ h1 img {
 	border: 2px solid #9464C4;
 }
 
-.content .itemshop {
+.content .fortnitetitle {
 	font-size: 50px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.content .itemshop {
+	font-size: 35px;
 	font-weight: bold;
 	padding-bottom: 10px;
 }
@@ -168,4 +173,44 @@ h1 img {
 	font-size: 50px;
 	font-weight: bold;
 	padding-bottom: 10px;
+}
+
+.player-info img {
+	float: left;
+	border: 5px solid;
+	background-image: linear-gradient(to left bottom, #f45c5c, #ff7846, #ff992d, #fbbb0e, #e7dd0a);
+	padding: 14px;
+}
+
+.player-info .uuid {
+	position: absolute;
+	font-size: 20px;
+	left: 669px;
+	bottom: 500px;
+}
+
+.player-info .name {
+	position: absolute;
+	font-size: 25px;
+	left: 669px;
+	bottom: 550px;
+}
+
+.player-info .skin {
+	position: absolute;
+	left: 669px;
+	bottom: 420px;
+}
+
+.player-info .cape {
+	position: absolute;
+	left: 669px;
+	bottom: 363px;
+}
+
+#playerName {
+	border-radius: 50px;
+	position: absolute;
+	bottom: 582px;
+	left: 747px;
 }
