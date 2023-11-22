@@ -209,8 +209,35 @@ h1 img {
 }
 
 #playerName {
-	border-radius: 50px;
-	position: absolute;
-	bottom: 582px;
-	left: 747px;
+	border-radius: 10px;
+    padding: 10px 10px 8px 10px;
+    font-size: 16px;
+    line-height: 1;
+    width: 350px;
+}
+
+.input-container button {
+	background: none;
+	border: 0;
+}
+
+.input-container button:focus-visible {
+	outline: none;
+	border: 0;
+}
+
+.input-container button img {
+	height: 30px;
+    margin-bottom: -9px;
+    margin-left: -73px;
+    cursor: pointer;
+}
+
+.copyButton {
+	font-size: 12px;
+    padding: 4px;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 0px 0 0 15px;
+    cursor: pointer;
 }
