@@ -13,6 +13,7 @@ function searchPlayer() {
 
             playerInfo += data.skin ? `<div class="skin"><a href="${data.skin}">Skin Download</a></div>` : '';
             playerInfo += data.cape ? `<div class="cape"><a href="${data.cape}">Cape Download</a></div>` : '';
+
             playerInfo += `</div>`;
 
             document.getElementById('playerInfo').innerHTML = playerInfo;
