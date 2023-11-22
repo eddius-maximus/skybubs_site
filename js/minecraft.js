@@ -6,6 +6,11 @@ function searchPlayer() {
             let playerInfo = `<div class="player-info">`;
             playerInfo += `<div class="name">Name: ${data.name}</div>`;
             playerInfo += `<div class="uuid">UUID: ${data.uuid}</div>`;
+            // Corrected URL for the avatar image
+            if (data.uuid) {
+                playerInfo += `<img src="https://mc-heads.net/body/${data.uuid}" alt="Player Avatar">`;
+            }
+
             playerInfo += data.skin ? `<div class="skin">Skin URL: <a href="${data.skin}">${data.skin}</a></div>` : '';
             playerInfo += data.cape ? `<div class="cape">Cape URL: <a href="${data.cape}">${data.cape}</a></div>` : '';
             playerInfo += `</div>`;
