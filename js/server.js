@@ -4,6 +4,8 @@ const app = express();
 const port = 3000;
 const cors = require('cors');
 const axios = require('axios');
+const fetch = require('node-fetch');
+const HYPIXEL_API_KEY = 'b6a49205-d25d-480e-9586-a6c35fe07008';
 
 app.use(cors()); // This will enable CORS for all routes
 
@@ -48,9 +50,18 @@ app.get('/minecraft-player/:name', async (req, res) => {
     }
 });
 
-
-
-
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+app.get('/minecraft-player-status/:playerName', async (req, res) => {
+    const playerName = req.params.playerName;
+    try {
+        const response = await fetch(`https://api.hypixel.net/status?key=${HYPIXEL_API_KEY}&uuid=${playerName}`);
+        const data = await response.json();
+        res.send(data);
+    } catch (error) {
+        res.status(500).send({ error: 'Error fetching player status' });
+    }
 });
+
+
+
+
+app.listen(3000, () => console.log('Server running on port ${port}'));

@@ -1,10 +1,10 @@
 body {
 
-	background-image: linear-gradient(to right top, #19b958, #00b08c, #00a3b0, #0092bd, #2f7fb3);
 	color: #ffffff;
 	text-align: center;
 	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-;
+	margin: 0px;
+
 }
 
 h1 {
@@ -17,8 +17,36 @@ h1 img {
 	margin-top: 15px;
 }
 
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background-image: linear-gradient(to right top, #19b958, #00b08c, #00a3b0, #0092bd, #2f7fb3);
+}
+
+.nyancat {
+	position: absolute;
+	top: 113px;
+	left: 0px;
+	height: 43px;
+}
+
+.stars {
+	position: absolute;
+	width: 100%;
+	background-image: url("../images/stars.gif");
+	background-repeat: repeat, repeat;
+	top: 0;
+	left: 0;
+	height: 158px;
+	z-index: -1;
+	opacity: 0.7;
+}
+
 .content {
-	height: 1000px;
 }
 
 .nav {
@@ -44,10 +72,12 @@ h1 img {
 	font-weight: bold;
 }
 
-.fortnite, .minecraft {
+.fortnite, .minecraft, .home {
 	margin: auto;
 	max-width: 1070px;
+
 }
+
 
 .fortnite .item {
 	width: 200px;
@@ -175,9 +205,14 @@ h1 img {
 	padding-bottom: 10px;
 }
 
+.player-info {
+	position: relative;
+}
+
 .player-info img {
 	float: left;
 	border: 5px solid;
+	border-radius: 30px;
 	background-image: linear-gradient(to left bottom, #f45c5c, #ff7846, #ff992d, #fbbb0e, #e7dd0a);
 	padding: 14px;
 }
@@ -185,27 +220,27 @@ h1 img {
 .player-info .uuid {
 	position: absolute;
 	font-size: 20px;
-	left: 669px;
-	bottom: 500px;
+	left: 240px;
+	top: 45px;
 }
 
 .player-info .name {
 	position: absolute;
 	font-size: 25px;
-	left: 669px;
-	bottom: 550px;
+	left: 240px;
+	top: 0px;
 }
 
 .player-info .skin {
 	position: absolute;
-	left: 669px;
-	bottom: 420px;
+	left: 240px;
+	top: 100px;
 }
 
 .player-info .cape {
 	position: absolute;
-	left: 669px;
-	bottom: 363px;
+	left: 240px;
+	top: 140px;
 }
 
 #playerName {
@@ -240,4 +275,111 @@ h1 img {
     border-radius: 5px;
     margin: 0px 0 0 15px;
     cursor: pointer;
+}
+
+.content .welcome {
+	position: relative;
+	font-size: 50px;
+	left: -124px;
+}
+
+.content .titlebubshome1 {
+	position: relative;
+	font-size: 50px;
+	left: -7px;
+	top: -61px;
+	color: #A8FCAE;
+}
+
+.content .titlebubshome2 {
+	position: relative;
+	font-size: 50px;
+	left: 200px;
+	top: -61px;
+	color: #A8FCAE;
+}
+
+.content .minititle2 {
+	position: relative;
+	font-size: 50px;
+	left: -12px;
+	top: 0px;
+}
+
+.content .titlebubshome3 {
+	position: relative;
+	font-size: 50px;
+	left: 130px;
+	top: -61px;
+	color: #A8FCAE;
+}
+
+.content .discordserver {
+	position: relative;
+	font-size: 50px;
+	left: -104px;
+	top: 0px;
+}
+
+.content .mycodedescription {
+	font-size: 40px;
+	position: relative;
+	color: #E72F5F;
+	left: 0px;
+	top: 0px;
+}
+
+.content .shortcut .fortcut img {
+	position: relative;
+	width: 700px;
+	border: 5px solid;
+	border-radius: 30px;
+	border-color: #ffffff;
+	left: -170px;
+	top: 0px;
+	font-size: 30px;
+	filter: brightness(50%);
+}
+
+.content .shortcut .fortcut img:hover {
+	position: relative;
+	width: 700px;
+	border: 5px solid;
+	border-radius: 30px;
+	border-color: #ffffff;
+	left: -170px;
+	top: 0px;
+
+	filter: brightness(100%);
+}
+
+.content .shortcut .fortcuttext {
+	position: relative;
+	font-size: 80px;
+	left: -657px;
+	top: -206px;
+	color: #ffffff;
+	padding: 10px;
+	filter: brightness(70%);
+}
+
+.content .shortcut .fortcuttext:hover {
+	position: relative;
+	font-size: 80px;
+	left: -657px;
+	top: -206px;
+	color: #ffffff;
+	filter: brightness(100%);
+}
+
+#playerInfo {
+	border: 5px #ffffff solid;
+	background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+	overflow: hidden;
+	border-radius: 30px;
+	padding: 25px;
+	margin-top: 20px;
+	box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.50);
+	-webkit-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.50);
+	-moz-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.50);
 }
