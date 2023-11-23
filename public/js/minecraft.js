@@ -18,6 +18,24 @@ function searchPlayer() {
             playerInfo += data.skin ? `<div class="skin"><a href="${data.skin}">Skin Download</a></div>` : '';
             playerInfo += data.cape ? `<div class="cape"><a href="${data.cape}">Cape Download</a></div>` : '';
 
+            // Add Hypixel online status
+            if (data.hypixelStatus && data.hypixelStatus.online) {
+                playerInfo += `<div class="hypixelstatus">Hypixel Status: Online</div>`;
+            } else {
+                playerInfo += `<div class="hypixelstatus">Hypixel Status: Offline</div>`;
+            }
+
+            if (data.hypixelGuild) {
+                playerInfo += `<div class="hypixelguild">Guild: ${data.hypixelGuild.name || 'None'}</div>`;
+                // Add more guild details as needed
+            } else {
+                playerInfo += `<div class="hypixelguild">Guild: None</div>`;
+            }
+
+             // Add Hypixel rank information
+            playerInfo += `<div class="hypixelrank">Rank: ${data.hypixelRank}</div>`;
+
+
             playerInfo += `</div>`;
 
             document.getElementById('playerInfo').innerHTML = playerInfo;
