@@ -29,8 +29,6 @@ function searchPlayer() {
                 `<div class="hypixelguild">Guild: ${data.hypixelGuild.name || 'None'}</div>` :
                 `<div class="hypixelguild">Guild: None</div>`;
 
-            let rankDisplayName = getRankDisplayName(data.hypixelRank);
-            hypixelInfo += `<div class="hypixelrank">Rank: ${rankDisplayName}</div>`;
             hypixelInfo += '</div>';
 
             playerInfo += hypixelInfo;
