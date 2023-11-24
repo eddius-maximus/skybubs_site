@@ -12,39 +12,38 @@ function searchPlayer() {
             playerInfo += `<div class="name">Name: ${data.name}</div>`;
             playerInfo += `<div class="uuid">UUID: <span id="uuid">${data.uuid}</span><span class="copyButton" data-target="#uuid">copy</span></div>`;
             if (data.uuid) {
-                playerInfo += `<img src="https://mc-heads.net/body/${data.uuid}" alt="Player Avatar">`;
+                playerInfo += `<img class="avatar" src="https://mc-heads.net/body/${data.uuid}" alt="Player Avatar">`;
             }
 
             playerInfo += data.skin ? `<div class="skin"><a href="${data.skin}">Skin Download</a></div>` : '';
             playerInfo += data.cape ? `<div class="cape"><a href="${data.cape}">Cape Download</a></div>` : '';
 
+            // Hypixel Info
+            let hypixelInfo = `<div class="hypixel-info">`;
             // Add Hypixel online status
-            if (data.hypixelStatus && data.hypixelStatus.online) {
-                playerInfo += `<div class="hypixelstatus">Hypixel Status: Online</div>`;
-            } else {
-                playerInfo += `<div class="hypixelstatus">Hypixel Status: Offline</div>`;
-            }
+            hypixelInfo += data.hypixelStatus && data.hypixelStatus.online ?
+                `<div class="hypixelstatus"><img class="logo" src="../public/images/hypixellogo.png">Hypixel Status: <span class="online">Online</span></div>` :
+                `<div class="hypixelstatus"><img class="logo" src="../public/images/hypixellogo.png">Hypixel Status: <span class="offline">Offline</span></div>`;
 
-            if (data.hypixelGuild) {
-                playerInfo += `<div class="hypixelguild">Guild: ${data.hypixelGuild.name || 'None'}</div>`;
-                // Add more guild details as needed
-            } else {
-                playerInfo += `<div class="hypixelguild">Guild: None</div>`;
-            }
+            hypixelInfo += data.hypixelGuild ?
+                `<div class="hypixelguild">Guild: ${data.hypixelGuild.name || 'None'}</div>` :
+                `<div class="hypixelguild">Guild: None</div>`;
 
-             // Add Hypixel rank information
-            playerInfo += `<div class="hypixelrank">Rank: ${data.hypixelRank}</div>`;
+            let rankDisplayName = getRankDisplayName(data.hypixelRank);
+            hypixelInfo += `<div class="hypixelrank">Rank: ${rankDisplayName}</div>`;
+            hypixelInfo += '</div>';
 
-
+            playerInfo += hypixelInfo;
             playerInfo += `</div>`;
 
             document.getElementById('playerInfo').innerHTML = playerInfo;
         })
         .catch(error => {
             console.error('Error:', error);
-            document.getElementById('playerInfo').innerHTML = '<div class="player-info"><img src="https://mc-heads.net/body/f939e136-0c4b-4df1-8b6a-c756087b8f3c"><div class="name">No results found or an error occurred.</div></div>';
+            document.getElementById('playerInfo').innerHTML = '<div class="player-info"><img class="avatar" src="https://mc-heads.net/body/f939e136-0c4b-4df1-8b6a-c756087b8f3c"><div class="name">No results found or an error occurred.</div></div>';
         });
 }
+
 
 document.getElementById('playerInfo').addEventListener('click', function(event) {
     if (event.target.classList.contains('copyButton')) {

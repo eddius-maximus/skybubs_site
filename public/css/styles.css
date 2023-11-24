@@ -209,7 +209,7 @@ h1 img {
 	position: relative;
 }
 
-.player-info img {
+.player-info .avatar {
 	float: left;
 	border: 5px solid;
 	border-radius: 30px;
@@ -382,4 +382,32 @@ h1 img {
 	box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.50);
 	-webkit-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.50);
 	-moz-box-shadow: 0px 7px 8px 0px rgba(0,0,0,0.50);
+}
+
+.hypixel-info {
+	float: right;
+    padding: 20px 20px 20px 69px;
+    background-image: linear-gradient(to left bottom, #d8d8d8, #aeaeae, #868686, #606060, #3d3d3d);
+    border: 3px solid #ffffff;
+    font-size: 18px;
+    position: relative;
+    border-radius: 10px;
+    color: white;
+}
+
+.hypixel-info .logo {
+	width: 50px;
+	position: absolute;
+	top: 6px;
+	left: 13px;
+}
+
+.hypixel-info .offline {
+	font-weight: bold;
+	color: orangered;
+}
+
+.hypixel-info .online {
+	font-weight: bold;
+	color: seagreen;
 }
