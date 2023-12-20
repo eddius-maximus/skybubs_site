@@ -22,8 +22,8 @@ function searchPlayer() {
             let hypixelInfo = `<div class="hypixel-info">`;
             // Add Hypixel online status
             hypixelInfo += data.hypixelStatus && data.hypixelStatus.online ?
-                `<div class="hypixelstatus"><img class="logo" src="../public/images/hypixellogo.png">Hypixel Status: <span class="online">Online</span></div>` :
-                `<div class="hypixelstatus"><img class="logo" src="../public/images/hypixellogo.png">Hypixel Status: <span class="offline">Offline</span></div>`;
+                `<div class="hypixelstatus"><img class="logo" src="./images/hypixellogo.png">Hypixel Status: <span class="online">Online</span></div>` :
+                `<div class="hypixelstatus"><img class="logo" src="./images/hypixellogo.png">Hypixel Status: <span class="offline">Offline</span></div>`;
 
             hypixelInfo += data.hypixelGuild ?
                 `<div class="hypixelguild">Guild: ${data.hypixelGuild.name || 'None'}</div>` :
